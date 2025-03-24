@@ -1,0 +1,55 @@
+class Graph:
+    def __init__(self):
+        self.graph = {}
+        self.heuristic = {}
+
+    def add_node(self, node, successors=None, heuristic=0):
+        self.graph[node] = successors if successors is not None else []
+        self.heuristic[node] = heuristic
+
+    def ao_star(self, start):
+        def calculate_cost(node):
+            if not self.graph[node]:
+                return self.heuristic[node]
+            
+            min_cost = float('inf')
+            best_path = None
+            
+            for path in self.graph[node]:
+                path_cost = sum(calculate_cost(sub_n) for sub_n in path) + len(path)
+                if path_cost < min_cost:
+                    min_cost = path_cost
+                    best_path = path
+            
+            self.heuristic[node] = min_cost
+            return min_cost
+
+        def get_solution_path(node):
+            if not self.graph[node]:
+                return [node]
+            
+            best_path = min(
+                self.graph[node],
+                key=lambda path: sum(self.heuristic[sub_n] for sub_n in path) + len(path),
+                default=[]
+            )
+            
+            solution = [node]
+            for sub_n in best_path:
+                solution.extend(get_solution_path(sub_n))
+            return solution
+
+        calculate_cost(start)
+        return get_solution_path(start)
+
+if __name__ == "__main__":
+    g = Graph()
+    
+    g.add_node("A", [["B", "E"], ["C"]], heuristic=0)
+    g.add_node("B", [["E"]], heuristic=1)
+    g.add_node("C", [], heuristic=3)
+    g.add_node("D", [["E", "F"]], heuristic=2)
+    g.add_node("E", [], heuristic=4)
+    g.add_node("F", [], heuristic=2)
+    
+    print("Solution Path:", g.ao_star("A"))

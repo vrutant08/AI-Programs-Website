@@ -1,0 +1,99 @@
+from collections import deque
+
+def fill_4_gallon_jug(state):
+    x, y = state
+    if x < 4:
+        return (4, y)
+    return state
+
+def fill_3_gallon_jug(state):
+    x, y = state
+    if y < 3:
+        return (x, 3)
+    return state
+
+def pour_out_4_gallon_jug(state):
+    x, y = state
+    if x > 0:
+        return (0, y)
+    return state
+
+def pour_out_3_gallon_jug(state):
+    x, y = state
+    if y > 0:
+        return (x, 0)
+    return state
+
+def pour_from_4_to_3(state):
+    x, y = state
+    if x > 0 and y < 3:
+        pour_amount = min(x, 3 - y)
+        return (x - pour_amount, y + pour_amount)
+    return state
+
+def pour_from_3_to_4(state):
+    x, y = state
+    if y > 0 and x < 4:
+        pour_amount = min(y, 4 - x)
+        return (x + pour_amount, y - pour_amount)
+    return state
+
+def empty_4_gallon_jug(state):
+    x, y = state
+    if x > 0:
+        return (0, y)
+    return state
+
+def empty_3_gallon_jug(state):
+    x, y = state
+    if y > 0:
+        return (x, 0)
+    return state
+
+def water_jug_problem():
+    initial_state = (0, 0)
+    goal = 2
+    
+    queue = deque([(initial_state, [initial_state])])
+    visited = {initial_state}
+    
+    operations = [
+        (fill_4_gallon_jug, "Fill 4-gallon jug"),
+        (fill_3_gallon_jug, "Fill 3-gallon jug"),
+        (pour_out_4_gallon_jug, "Pour out 4-gallon jug"),
+        (pour_out_3_gallon_jug, "Pour out 3-gallon jug"),
+        (pour_from_4_to_3, "Pour from 4-gallon to 3-gallon jug"),
+        (pour_from_3_to_4, "Pour from 3-gallon to 4-gallon jug"),
+        (empty_4_gallon_jug, "Empty 4-gallon jug"),
+        (empty_3_gallon_jug, "Empty 3-gallon jug")
+    ]
+    
+    while queue:
+        (x, y), path = queue.popleft()
+        
+        if x == goal:
+            return path
+        
+        for operation, description in operations:
+            new_state = operation((x, y))
+            if new_state not in visited:
+                visited.add(new_state)
+                new_path = path + [(description, new_state)]
+                queue.append((new_state, new_path))
+    
+    return None
+
+if __name__ == "__main__":
+    print("Initial state:", (0, 0))
+    result = water_jug_problem()
+    
+    if result:
+        print("Solution path:")
+        for step in result:
+            if isinstance(step, tuple) and len(step) == 2:
+                print(step)
+            else:
+                description, state = step
+                print(f"{description}: {state}")
+    else:
+        print("No solution found.")
