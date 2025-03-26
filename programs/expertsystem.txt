@@ -1,0 +1,42 @@
+# Expert System
+
+## What is an Expert System?
+An expert system is a computer program designed to solve complex problems and provide decision-making capabilities similar to a human expert. It achieves this by extracting knowledge from its knowledge base and applying reasoning and inference rules based on user queries.
+
+Expert systems are a subset of artificial intelligence. The first expert system was developed in the 1970s and marked a significant milestone in AI. These systems are domain-specific and rely on the knowledge stored in their knowledge base to perform efficiently. For example, Google’s spelling error suggestions are a practical application of expert systems.
+
+## Characteristics of Expert Systems:
+- **High Performance**: Solves complex problems with high efficiency and accuracy.
+- **Understandable**: Accepts input in human language and provides easily interpretable output.
+- **Reliable**: Generates accurate and efficient results.
+- **Highly Responsive**: Delivers results for complex queries in a short time.
+
+## Capabilities of Expert Systems:
+- Advising
+- Assisting in decision-making
+- Demonstrating and explaining
+- Diagnosing and predicting results
+- Interpreting input and justifying conclusions
+- Suggesting alternative solutions
+
+## Advantages of Expert Systems:
+- Highly reproducible and consistent.
+- Suitable for risky environments where human presence is unsafe.
+- Minimal error rate if the knowledge base is accurate.
+- Unaffected by emotions, fatigue, or tension.
+- Provides high-speed responses to queries.
+
+## Limitations of Expert Systems:
+- Incorrect knowledge in the knowledge base can lead to wrong responses.
+- Lacks creativity for novel scenarios.
+- High maintenance and development costs.
+- Difficult knowledge acquisition for design.
+- Domain-specific; requires separate systems for each domain.
+- Cannot learn independently; requires manual updates.
+
+## Applications of Expert Systems:
+1. **Design and Manufacturing**: Used for designing devices like camera lenses and automobiles.
+2. **Knowledge Domain**: Publishes relevant knowledge to users (e.g., tax advisors).
+3. **Finance**: Detects fraud and advises bankers on loan approvals.
+4. **Medical Diagnosis**: Assists in diagnosing and troubleshooting medical conditions.
+5. **Planning and Scheduling**: Helps in planning and scheduling tasks to achieve specific goals.

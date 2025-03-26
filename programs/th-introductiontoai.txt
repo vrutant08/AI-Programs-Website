@@ -1,0 +1,21 @@
+# Introduction to Artificial Intelligence
+
+## What is Artificial Intelligence (AI)?
+Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and make decisions like humans. It combines "Artificial" (man-made) and "Intelligence" (thinking power) to create systems capable of performing tasks requiring human-like cognition.
+
+## Definition:
+"AI is a branch of computer science that enables the creation of intelligent machines capable of behaving, thinking, and making decisions like humans."
+
+## Goals of AI:
+1. Replicate human intelligence.
+2. Solve knowledge-intensive tasks.
+3. Connect perception and action intelligently.
+4. Build machines capable of performing tasks requiring human intelligence, such as:
+   - Proving theorems.
+   - Playing chess.
+   - Planning surgical operations.
+   - Driving cars in traffic.
+5. Create systems that can:
+   - Exhibit intelligent behavior.
+   - Learn new things independently.
+   - Demonstrate, explain, and advise users.

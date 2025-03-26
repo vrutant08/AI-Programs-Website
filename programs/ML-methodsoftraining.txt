@@ -1,0 +1,41 @@
+# Machine Learning: Methods of Training
+
+## What is Machine Learning?
+Machine Learning (ML) is a subset of artificial intelligence that focuses on creating algorithms enabling machines to learn from data and past experiences without explicit programming. Coined by Arthur Samuel in 1959, ML allows machines to improve performance and make predictions based on historical data.
+
+## How Does Machine Learning Work?
+ML systems build predictive models by learning from previous data. The more data provided, the better the model's accuracy in predicting outcomes.
+
+## Features of Machine Learning:
+- Detects patterns in datasets.
+- Learns from past data and improves automatically.
+- Data-driven technology.
+- Similar to data mining, dealing with large datasets.
+
+## Types of Machine Learning:
+1. **Supervised Learning**:
+   - Uses labeled data for training.
+   - Builds models to predict outputs based on input data.
+   - Examples: Spam filtering, regression, classification.
+
+2. **Unsupervised Learning**:
+   - Works with unlabeled data.
+   - Finds hidden patterns or structures in data.
+   - Examples: Clustering, association.
+
+3. **Reinforcement Learning**:
+   - Feedback-based learning where agents learn by rewards and penalties.
+   - Example: Robotic dogs learning movements.
+
+## Applications of Machine Learning:
+1. **Image Recognition**: Identifying objects, faces, and places.
+2. **Speech Recognition**: Converting voice to text (e.g., Google Assistant, Siri).
+3. **Traffic Prediction**: Google Maps predicting traffic conditions.
+4. **Product Recommendations**: Amazon, Netflix suggesting products or shows.
+5. **Self-Driving Cars**: Tesla's autonomous vehicles.
+6. **Email Spam Filtering**: Categorizing emails as spam or important.
+7. **Virtual Assistants**: Alexa, Cortana, and Siri.
+8. **Fraud Detection**: Identifying fraudulent online transactions.
+9. **Stock Market Trading**: Predicting trends using ML algorithms.
+10. **Medical Diagnosis**: Detecting diseases like brain tumors.
+11. **Language Translation**: Translating text using neural networks.
